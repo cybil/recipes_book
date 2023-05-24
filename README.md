@@ -37,12 +37,15 @@ password : 'password'
 
 - Créer une nouvelle branche nommée "bastien/exo_1" en utilisant `git` , puis faire la totalité de l'exercice dans cette branche
 - Ajouter un nouveau modèle `Recipe` qui correspond à une recette de cuisine, en choisissant le bon type pour chaque attribut:
-  `name` : le nom de la recette
-  `description` : les instructions de la recette
-  `draft` : si la recette est en l'état de brouillon ou non
-  `status` : le statut de la recette ayant les valeurs suivantes "pending", "validated", "rejected", "aborted"
+- `name` : le nom de la recette
+- `description` : les instructions de la recette
+- `draft` : si la recette est en l'état de brouillon ou non
+- `status` : le statut de la recette ayant les valeurs suivantes "pending", "validated", "rejected", "aborted"
+
 - Faire en sorte de pouvoir lister la totalité des recettes via un appel API sur l'endpoint : `/v1/recipes` en pouvant préciser si on souhaite l'ensemble des recettes, ou seulement celles avec un certain statut. L'utilisateur faisant l'appel API doit être authentifié.
+- Faire en sorte de pouvoir gérer les recettes depuis active admin
 - Pousser le travail sur la branche git et créer la Pull Request correspondante sur Github.
+
 
 
 Tips : utilise l'interface admin pour créer des recettes et des utilisateurs, ou créer les directement en base de données.
