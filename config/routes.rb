@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # resources :recipes
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   ExceptionHunter.routes(self)
@@ -18,6 +19,7 @@ Rails.application.routes.draw do
       resources :settings, only: [] do
         get :must_update, on: :collection
       end
+      resources :recipes, only: [:index]
     end
   end
 end

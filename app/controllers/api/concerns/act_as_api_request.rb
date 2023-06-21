@@ -5,7 +5,7 @@ module Api
 
       included do
         before_action :skip_session_storage
-        before_action :check_json_request
+        # before_action :check_json_request
       end
 
       def check_json_request
