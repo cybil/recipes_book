@@ -1,8 +1,6 @@
 module Api
-  	module V1
-		class RecipesController < Api::V1::ApiController #ApplicationController
-
-			before_action :authenticate_user!
+  module V1
+		class RecipesController < Api::V1::ApiController
 
 			def index
 				@recipes = Recipe.where(index_params)

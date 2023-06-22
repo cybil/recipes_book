@@ -9,7 +9,7 @@
 #  status      :string
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
-#
+
 class Recipe < ApplicationRecord
-	enum :status, [ :pending, :validated, :rejected, :aborted ]
+	enum status: { pending: 'pending',	validated: 'validated', rejected: 'rejected', aborted: 'aborted' }
 end
