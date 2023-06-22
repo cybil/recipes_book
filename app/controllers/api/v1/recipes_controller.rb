@@ -5,13 +5,7 @@ module Api
 			before_action :authenticate_user!
 
 			def index
-				recipes = Recipe.where(index_params)
-
-				render json: {
-					statut: "ok",
-				 	error: 0,
-					result: recipes
-				}
+				@recipes = Recipe.where(index_params)
 			end
 
 			private
