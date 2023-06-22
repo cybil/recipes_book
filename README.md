@@ -56,17 +56,34 @@ Tips : utilise l'interface admin pour créer des recettes et des utilisateurs, o
 - tester avec Rspec : modèle et controller
 - controller : création et listing avec relation
 
+
 ### Todo
 
 - Ajouter la notion de Commentaire sur une recette. Une recette peut avoir plusieurs commentaires laissés par différents utilisateurs qui doivent être identifiés
 - Faire en sorte qu'un utilisateur authentifié puisse créer un commentaire sur une recette via cet endpoint `/v1/comments`
 - Faire en sorte de pouvoir lister l'ensemble des commentaires d'une recette dans un endpoint dédié `/v1/comments?receipe_id=xxxx`
+- /!\ pour permettre à un utilisateurs authentifié de réaliser ces actions, il est nécessaire de lui donner des droits. Voir Exercice 2bis
 - Ajouter des tests en utilisant la gem Rspec :
   - tester le modèle `Recipe` et le modèle des commentaires
   - tester le controller des recettes
   - tester le controller des commentaires
 
 Tips : un guide complet sur [Rspec](https://www.lambdatest.com/learning-hub/rspec-ruby)
+
+## Exercice 2bis
+
+### Compétences
+- pundit : les bases
+
+### Todo
+
+- Retirer les commentaires des lignes Pundit du fichier ApiController (ligne 5 et 9) pour remettre en l'état
+- Créer une policy pour la ressource `recipes` avec la totalité des actions autorisée
+- Créer une policy pour la ressource `comments` avec la totalité des actions autorisée
+- Dans les controller correspondants, utiliser les policies correspondantes pour donner les bons droits
+
+Tips : bien lire la documentation de la gem `pundit` et un [tutoriel assez complet](https://bootrails.com/blog/rails-pundit-tutorial/)
+
 
 ## Exercice 3
 
