@@ -40,6 +40,8 @@ class User < ApplicationRecord
 
   before_validation :init_uid
 
+  has_many :comments, class_name: 'Comment'
+
   def full_name
     return username if first_name.blank?
 

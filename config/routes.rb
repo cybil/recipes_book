@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+# <<<<<<< HEAD
+# =======
+#   # resources :comments
+#   # resources :recipes
+# >>>>>>> 1eb86b4 (exo 2)
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   ExceptionHunter.routes(self)
@@ -18,7 +23,12 @@ Rails.application.routes.draw do
       resources :settings, only: [] do
         get :must_update, on: :collection
       end
+# <<<<<<< HEAD
       resources :recipes, only: :index
+# =======
+      # resources :recipes, only: [:index]
+      resources :comments, only: [:index, :create]
+# >>>>>>> 1eb86b4 (exo 2)
     end
   end
 end

@@ -11,5 +11,11 @@
 #  updated_at  :datetime         not null
 
 class Recipe < ApplicationRecord
+# <<<<<<< HEAD
 	enum status: { pending: 'pending',	validated: 'validated', rejected: 'rejected', aborted: 'aborted' }
+# =======
+# 	enum :status, [ :pending, :validated, :rejected, :aborted ]
+
+  has_many :comments, class_name: 'Comment'
+# >>>>>>> 1eb86b4 (exo 2)
 end
